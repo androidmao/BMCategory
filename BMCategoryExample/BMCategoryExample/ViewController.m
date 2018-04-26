@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#import "GeneralUtil.h"
+
 @interface ViewController ()
 
 @end
@@ -16,7 +18,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 80, 50)];
+    [button setCenter:self.view.center];
+    [button setBackgroundImage:[GeneralUtil createImageByColor:[UIColor lightGrayColor]] forState:UIControlStateNormal];
+    
+    [self.view addSubview:button];
+    
+    
+    
+    [button addTarget:self action:@selector(clickAction:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    
+}
+
+- (void)clickAction:(UIButton *)button {
+    [GeneralUtil callPhone:@"18628699351"];
 }
 
 

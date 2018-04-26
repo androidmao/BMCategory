@@ -15,6 +15,8 @@
 		FB2CF34D2091CBE1006D4B23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CF34C2091CBE1006D4B23 /* main.m */; };
 		FB2CF3572091CBE1006D4B23 /* BMCategoryExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CF3562091CBE1006D4B23 /* BMCategoryExampleTests.m */; };
 		FB2CF3622091CBE1006D4B23 /* BMCategoryExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CF3612091CBE1006D4B23 /* BMCategoryExampleUITests.m */; };
+		FB2CF3722091CDD1006D4B23 /* UIView+LBFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CF3712091CDD0006D4B23 /* UIView+LBFrame.m */; };
+		FB2CF3752091CDF0006D4B23 /* GeneralUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CF3742091CDF0006D4B23 /* GeneralUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		FB2CF35D2091CBE1006D4B23 /* BMCategoryExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BMCategoryExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB2CF3612091CBE1006D4B23 /* BMCategoryExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMCategoryExampleUITests.m; sourceTree = "<group>"; };
 		FB2CF3632091CBE1006D4B23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB2CF3702091CDD0006D4B23 /* UIView+LBFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LBFrame.h"; sourceTree = "<group>"; };
+		FB2CF3712091CDD0006D4B23 /* UIView+LBFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LBFrame.m"; sourceTree = "<group>"; };
+		FB2CF3732091CDF0006D4B23 /* GeneralUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralUtil.h; sourceTree = "<group>"; };
+		FB2CF3742091CDF0006D4B23 /* GeneralUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 		FB2CF33C2091CBE1006D4B23 /* BMCategoryExample */ = {
 			isa = PBXGroup;
 			children = (
+				FB2CF36F2091CDD0006D4B23 /* BMCategory */,
 				FB2CF33D2091CBE1006D4B23 /* AppDelegate.h */,
 				FB2CF33E2091CBE1006D4B23 /* AppDelegate.m */,
 				FB2CF3402091CBE1006D4B23 /* ViewController.h */,
@@ -130,6 +137,18 @@
 				FB2CF3632091CBE1006D4B23 /* Info.plist */,
 			);
 			path = BMCategoryExampleUITests;
+			sourceTree = "<group>";
+		};
+		FB2CF36F2091CDD0006D4B23 /* BMCategory */ = {
+			isa = PBXGroup;
+			children = (
+				FB2CF3732091CDF0006D4B23 /* GeneralUtil.h */,
+				FB2CF3742091CDF0006D4B23 /* GeneralUtil.m */,
+				FB2CF3702091CDD0006D4B23 /* UIView+LBFrame.h */,
+				FB2CF3712091CDD0006D4B23 /* UIView+LBFrame.m */,
+			);
+			name = BMCategory;
+			path = ../../BMCategory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +284,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB2CF3752091CDF0006D4B23 /* GeneralUtil.m in Sources */,
+				FB2CF3722091CDD1006D4B23 /* UIView+LBFrame.m in Sources */,
 				FB2CF3422091CBE1006D4B23 /* ViewController.m in Sources */,
 				FB2CF34D2091CBE1006D4B23 /* main.m in Sources */,
 				FB2CF33F2091CBE1006D4B23 /* AppDelegate.m in Sources */,
@@ -433,6 +454,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2TEJX29P8T;
 				INFOPLIST_FILE = BMCategoryExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.baimao.BMCategoryExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -447,6 +469,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2TEJX29P8T;
 				INFOPLIST_FILE = BMCategoryExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.baimao.BMCategoryExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
