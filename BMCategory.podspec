@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
                        Custom Category used on iOS, which implement by Objective-C.
                        DESC
-  s.homepage         = "https://github.com/android/BMCategory"
+  s.homepage         = "https://github.com/androidmao/BMCategory"
   s.license          = 'MIT'
   s.author           = { "androidmao" => "androidmao@163.com" }
   s.platform         = :ios, '8.0'
