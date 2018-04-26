@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.license          = 'MIT'
   s.author           = { "androidmao" => "androidmao@163.com" }
   s.platform         = :ios, '8.0'
-  s.source           = { :git => "https://github.com/android/BMCategory.git", :tag => s.version }
+  s.source           = { :git => "https://github.com/androidmao/BMCategory.git", :tag => s.version }
   s.source_files     = 'BMCategory/**/*.{h,m}'
   s.requires_arc     = true
 end
