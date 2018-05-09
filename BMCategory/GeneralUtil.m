@@ -565,15 +565,6 @@
     return [emailTest evaluateWithObject:mail];
 }
 
-//正则匹配用户姓名,20位的中文或英文
-+ (BOOL)checkUserName : (NSString *) userName {
-    //    NSString *pattern = @"^[A-Za-z0-9]{6,20}+$";
-    NSString *pattern = @"^([\u4e00-\u9fa5]+|([a-zA-Z]+\s?)+)$";
-    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", pattern];
-    BOOL isMatch = [pred evaluateWithObject:userName];
-    return isMatch;
-}
-
 
 //正则匹配用户身份证号15或18位
 + (BOOL)checkUserIdCard: (NSString *) idCard {

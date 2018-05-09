@@ -200,14 +200,6 @@
 + (BOOL)checkMailInput:(NSString *)mail;
 
 /**
- 正则匹配用户姓名,20位的中文或英文
-
- @param userName userName
- @return return value
- */
-+ (BOOL)checkUserName : (NSString *) userName;
-
-/**
  正则匹配用户身份证号
 
  @param idCard idCard
