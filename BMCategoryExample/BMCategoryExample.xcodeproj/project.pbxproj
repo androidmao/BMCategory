@@ -99,6 +99,7 @@
 		FB2CF3942091DE5D006D4B23 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		FB2CF3952091DE5D006D4B23 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		FBE1ACB920A282D00014AE18 /* QRCodeBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QRCodeBundle.bundle; sourceTree = "<group>"; };
+		FBE1ACBC20A2A2B60014AE18 /* BMCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMCategory.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +193,7 @@
 				FB2CF3712091CDD0006D4B23 /* UIView+LBFrame.m */,
 				FB2CF3762091D941006D4B23 /* QRCodeScanViewController.h */,
 				FB2CF3772091D941006D4B23 /* QRCodeScanViewController.m */,
+				FBE1ACBC20A2A2B60014AE18 /* BMCategory.h */,
 			);
 			name = BMCategory;
 			path = ../../BMCategory;

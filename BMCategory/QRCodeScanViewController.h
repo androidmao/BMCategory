@@ -9,11 +9,17 @@
 #import <UIKit/UIKit.h>
 
 
+/**
+ 二维码扫描回调函数
+
+ @param result result 二维码扫描结果
+ @return return value 二维码扫描完成是否关闭当前界面
+ */
 typedef BOOL(^QRCodeScanCompletion)(NSString *result);
 
 
 @interface QRCodeScanViewController : UIViewController
 
-@property (nonatomic,copy) QRCodeScanCompletion qrCodeScanCompletion;
+- (instancetype)initWithResult:(QRCodeScanCompletion)qrCodeScanCompletion;
 
 @end

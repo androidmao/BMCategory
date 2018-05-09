@@ -17,6 +17,8 @@
 #define SafeAreaTopHeight (SCREEN_H == 812.0 ? 88 : 64)
 #define SafeAreaBottomHeight (SCREEN_H == 812.0 ? 34 : 0)
 
+#define QRCodeBundle [NSBundle bundleWithPath:[[NSBundle bundleForClass:[self class]] pathForResource:@"QRCodeBundle" ofType:@"bundle"]]
+
 @interface QRCodeScanViewController ()<AVCaptureMetadataOutputObjectsDelegate,AVCaptureVideoDataOutputSampleBufferDelegate>
 
 @property(nonatomic, strong) AVCaptureDevice *device;
@@ -27,17 +29,27 @@
 
 @property(nonatomic, assign) CGRect interestRect;
 
-@property(nonatomic,strong) UIImageView *qrcodeBackgroundImageView;
+@property(nonatomic, strong) UIImageView *qrcodeBackgroundImageView;
 
-@property(nonatomic,strong) UIImageView *scanningImageView;
+@property(nonatomic, strong) UIImageView *scanningImageView;
 
-@property(nonatomic,strong) UIButton *closeButton;
-@property(nonatomic,strong) UIButton *lightSwitchButton;
+@property(nonatomic, strong) UIView *titleView;
+@property(nonatomic, strong) UIButton *closeButton;
+@property(nonatomic, strong) UIButton *lightSwitchButton;
+
+@property(nonatomic, copy) QRCodeScanCompletion qrCodeScanCompletion;
 
 @end
 
 @implementation QRCodeScanViewController
 
+- (instancetype)initWithResult:(QRCodeScanCompletion)qrCodeScanCompletion {
+    self = [super init];
+    if (self) {
+        _qrCodeScanCompletion = qrCodeScanCompletion;
+    }
+    return self;
+}
 
 - (void)opentAVCaptureSession {
 
@@ -189,8 +201,7 @@
     if (sounding) {
         //设置自定义声音
         SystemSoundID soundID;
-        NSBundle *bundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:[self class]] pathForResource:@"QRCodeBundle" ofType:@"bundle"]];
-        AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:[bundle pathForResource:@"qrcode_ring" ofType:@"wav"]], &soundID);
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:[QRCodeBundle pathForResource:@"qrcode_ring" ofType:@"wav"]], &soundID);
         AudioServicesPlaySystemSound(soundID);
     }
 }
@@ -198,21 +209,18 @@
 - (UIImageView *)qrcodeBackgroundImageView {
     if (!_qrcodeBackgroundImageView) {
         
-        NSBundle *bundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:[self class]] pathForResource:@"QRCodeBundle" ofType:@"bundle"]];
-        
-        
-        _qrcodeBackgroundImageView = [[UIImageView alloc]initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"image_qrcode_background@2x" ofType:@"png"]]];
+        _qrcodeBackgroundImageView = [[UIImageView alloc]initWithImage:[UIImage imageWithContentsOfFile:[QRCodeBundle pathForResource:@"image_qrcode_background@2x" ofType:@"png"]]];
         [_qrcodeBackgroundImageView setUserInteractionEnabled:YES];
         [_qrcodeBackgroundImageView.layer setBorderColor:[UIColor greenColor].CGColor];
         [_qrcodeBackgroundImageView.layer setBorderWidth:0.5];
 
-        UIImageView *qrcodeTopLeftImageView = [[UIImageView alloc]initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"icon_qrcode_top_left@2x" ofType:@"png"]]];
+        UIImageView *qrcodeTopLeftImageView = [[UIImageView alloc]initWithImage:[UIImage imageWithContentsOfFile:[QRCodeBundle pathForResource:@"icon_qrcode_top_left@2x" ofType:@"png"]]];
 
-        UIImageView *qrcodeTopRightImageView = [[UIImageView alloc]initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"icon_qrcode_top_right@2x" ofType:@"png"]]];
+        UIImageView *qrcodeTopRightImageView = [[UIImageView alloc]initWithImage:[UIImage imageWithContentsOfFile:[QRCodeBundle pathForResource:@"icon_qrcode_top_right@2x" ofType:@"png"]]];
 
-        UIImageView *qrcodeBottomLeftImageView = [[UIImageView alloc]initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"icon_qrcode_bottom_left@2x" ofType:@"png"]]];
+        UIImageView *qrcodeBottomLeftImageView = [[UIImageView alloc]initWithImage:[UIImage imageWithContentsOfFile:[QRCodeBundle pathForResource:@"icon_qrcode_bottom_left@2x" ofType:@"png"]]];
 
-        UIImageView *qrcodeBottomRightImageView = [[UIImageView alloc]initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"icon_qrcode_bottom_right@2x" ofType:@"png"]]];
+        UIImageView *qrcodeBottomRightImageView = [[UIImageView alloc]initWithImage:[UIImage imageWithContentsOfFile:[QRCodeBundle pathForResource:@"icon_qrcode_bottom_right@2x" ofType:@"png"]]];
 
         [_qrcodeBackgroundImageView addSubview:qrcodeTopLeftImageView];
         [_qrcodeBackgroundImageView addSubview:qrcodeTopRightImageView];
@@ -247,10 +255,21 @@
     return _qrcodeBackgroundImageView;
 }
 
+- (UIView *)titleView {
+    if (!_titleView) {
+        _titleView = [[UIView alloc]init];
+        [_titleView setBackgroundColor:[UIColor blackColor]];
+        [_titleView setAlpha:0.8];
+    }
+    return _titleView;
+}
+
 - (UIButton *)closeButton {
     if (!_closeButton) {
         _closeButton = [[UIButton alloc]init];
-        [_closeButton setTitle:@"关闭" forState:UIControlStateNormal];
+        [_closeButton setTitle:@"返回" forState:UIControlStateNormal];
+        [_closeButton.titleLabel setFont:[UIFont systemFontOfSize:17.0]];
+        [_closeButton setImage:[UIImage imageWithContentsOfFile:[QRCodeBundle pathForResource:@"icon_back@2x" ofType:@"png"]] forState:UIControlStateNormal];
         [_closeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_closeButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
         [_closeButton addTarget:self action:@selector(QRCodeScanAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -261,9 +280,8 @@
 - (UIButton *)lightSwitchButton {
     if (!_lightSwitchButton) {
         _lightSwitchButton = [[UIButton alloc]init];
-        NSBundle *bundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:[self class]] pathForResource:@"QRCodeBundle" ofType:@"bundle"]];
-        [_lightSwitchButton setImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"icon_light_normal@2x" ofType:@"png"]] forState:UIControlStateNormal];
-        [_lightSwitchButton setImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"icon_light_highlighted@2x" ofType:@"png"]] forState:UIControlStateSelected];
+        [_lightSwitchButton setImage:[UIImage imageWithContentsOfFile:[QRCodeBundle pathForResource:@"icon_light_normal@2x" ofType:@"png"]] forState:UIControlStateNormal];
+        [_lightSwitchButton setImage:[UIImage imageWithContentsOfFile:[QRCodeBundle pathForResource:@"icon_light_highlighted@2x" ofType:@"png"]] forState:UIControlStateSelected];
         [_lightSwitchButton addTarget:self action:@selector(QRCodeScanAction:) forControlEvents:UIControlEventTouchUpInside];
         [_lightSwitchButton setHidden:YES];
     }
@@ -273,8 +291,7 @@
 - (UIImageView *)scanningImageView {
     if (!_scanningImageView) {
         _scanningImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_W - 120, (SCREEN_W - 120) * 0.0375)];
-        NSBundle *bundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:[self class]] pathForResource:@"QRCodeBundle" ofType:@"bundle"]];
-        [_scanningImageView setImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"qrcode_scan_weixin_Line@2x" ofType:@"png"]]];
+        [_scanningImageView setImage:[UIImage imageWithContentsOfFile:[QRCodeBundle pathForResource:@"qrcode_scan_weixin_Line@2x" ofType:@"png"]]];
         [_scanningImageView setHidden:YES];
     }
     return _scanningImageView;
@@ -285,11 +302,9 @@
 
     [self opentAVCaptureSession];
 
-    UIView *topView = [[UIView alloc]init];
-    [topView setBackgroundColor:[UIColor blackColor]];
-    [topView setAlpha:0.8];
-    [self.view addSubview:topView];
-    [topView mas_makeConstraints:^(MASConstraintMaker *make) {
+    
+    [self.view addSubview:self.titleView];
+    [self.titleView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view);
         make.left.equalTo(self.view);
         make.right.equalTo(self.view);
@@ -297,11 +312,11 @@
     }];
 
 
-    [topView addSubview:self.closeButton];
+    [self.titleView addSubview:self.closeButton];
     [self.closeButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(topView);
-        make.left.equalTo(topView);
-        make.width.mas_equalTo(80);
+        make.bottom.equalTo(self.titleView);
+        make.left.equalTo(self.titleView);
+        make.width.mas_equalTo(65);
         make.height.mas_equalTo(44);
     }];
 
@@ -382,6 +397,12 @@
     [self.scanningImageView.layer addAnimation:scanningAnimation forKey:nil];
     
 }
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

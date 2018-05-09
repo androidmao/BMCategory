@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "BMCategory"
-  s.version          = "0.0.7"
+  s.version          = "0.0.8"
   s.summary          = "Custom Category used on iOS."
   s.description      = <<-DESC
                        Custom Category used on iOS, which implement by Objective-C.
