@@ -8,9 +8,7 @@
 
 #import "ViewController.h"
 
-#import "GeneralUtil.h"
-
-#import "QRCodeScanViewController.h"
+#import "BMCategory.h"
 
 @interface ViewController ()
 
