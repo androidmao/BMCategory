@@ -10,6 +10,8 @@
 
 #import "GeneralUtil.h"
 
+#import "QRCodeScanViewController.h"
+
 @interface ViewController ()
 
 @end
@@ -34,7 +36,15 @@
 }
 
 - (void)clickAction:(UIButton *)button {
-    [GeneralUtil callPhone:@"18628699351"];
+    
+    QRCodeScanViewController *qrCodeScanViewController = [[QRCodeScanViewController alloc]init];
+    [qrCodeScanViewController setQrCodeScanCompletion:^BOOL(NSString *result) {
+        return NO;
+    }];
+    
+    
+    [self presentViewController:qrCodeScanViewController animated:YES completion:nil];
+    
 }
 
 
