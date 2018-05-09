@@ -17,6 +17,19 @@
 		FB2CF3622091CBE1006D4B23 /* BMCategoryExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CF3612091CBE1006D4B23 /* BMCategoryExampleUITests.m */; };
 		FB2CF3722091CDD1006D4B23 /* UIView+LBFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CF3712091CDD0006D4B23 /* UIView+LBFrame.m */; };
 		FB2CF3752091CDF0006D4B23 /* GeneralUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CF3742091CDF0006D4B23 /* GeneralUtil.m */; };
+		FB2CF3782091D941006D4B23 /* QRCodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CF3772091D941006D4B23 /* QRCodeScanViewController.m */; };
+		FB2CF3962091DE5D006D4B23 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB2CF37C2091DE5D006D4B23 /* Info.plist */; };
+		FB2CF3972091DE5D006D4B23 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CF37E2091DE5D006D4B23 /* MASCompositeConstraint.m */; };
+		FB2CF3982091DE5D006D4B23 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CF3812091DE5D006D4B23 /* MASConstraint.m */; };
+		FB2CF3992091DE5D006D4B23 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CF3832091DE5D006D4B23 /* MASConstraintMaker.m */; };
+		FB2CF39A2091DE5D006D4B23 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CF3852091DE5D006D4B23 /* MASLayoutConstraint.m */; };
+		FB2CF39B2091DE5D006D4B23 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CF3892091DE5D006D4B23 /* MASViewAttribute.m */; };
+		FB2CF39C2091DE5D006D4B23 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CF38B2091DE5D006D4B23 /* MASViewConstraint.m */; };
+		FB2CF39D2091DE5D006D4B23 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CF38D2091DE5D006D4B23 /* NSArray+MASAdditions.m */; };
+		FB2CF39E2091DE5D006D4B23 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CF3902091DE5D006D4B23 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		FB2CF39F2091DE5D006D4B23 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CF3922091DE5D006D4B23 /* View+MASAdditions.m */; };
+		FB2CF3A02091DE5D006D4B23 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CF3952091DE5D006D4B23 /* ViewController+MASAdditions.m */; };
+		FBE1ACBA20A282D00014AE18 /* QRCodeBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FBE1ACB920A282D00014AE18 /* QRCodeBundle.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +70,35 @@
 		FB2CF3712091CDD0006D4B23 /* UIView+LBFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LBFrame.m"; sourceTree = "<group>"; };
 		FB2CF3732091CDF0006D4B23 /* GeneralUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralUtil.h; sourceTree = "<group>"; };
 		FB2CF3742091CDF0006D4B23 /* GeneralUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralUtil.m; sourceTree = "<group>"; };
+		FB2CF3762091D941006D4B23 /* QRCodeScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeScanViewController.h; sourceTree = "<group>"; };
+		FB2CF3772091D941006D4B23 /* QRCodeScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeScanViewController.m; sourceTree = "<group>"; };
+		FB2CF37C2091DE5D006D4B23 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB2CF37D2091DE5D006D4B23 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		FB2CF37E2091DE5D006D4B23 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		FB2CF37F2091DE5D006D4B23 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		FB2CF3802091DE5D006D4B23 /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		FB2CF3812091DE5D006D4B23 /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		FB2CF3822091DE5D006D4B23 /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		FB2CF3832091DE5D006D4B23 /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		FB2CF3842091DE5D006D4B23 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		FB2CF3852091DE5D006D4B23 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		FB2CF3862091DE5D006D4B23 /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		FB2CF3872091DE5D006D4B23 /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		FB2CF3882091DE5D006D4B23 /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		FB2CF3892091DE5D006D4B23 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		FB2CF38A2091DE5D006D4B23 /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		FB2CF38B2091DE5D006D4B23 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		FB2CF38C2091DE5D006D4B23 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		FB2CF38D2091DE5D006D4B23 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		FB2CF38E2091DE5D006D4B23 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		FB2CF38F2091DE5D006D4B23 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		FB2CF3902091DE5D006D4B23 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		FB2CF3912091DE5D006D4B23 /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		FB2CF3922091DE5D006D4B23 /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		FB2CF3932091DE5D006D4B23 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		FB2CF3942091DE5D006D4B23 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		FB2CF3952091DE5D006D4B23 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		FBE1ACB920A282D00014AE18 /* QRCodeBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QRCodeBundle.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +149,7 @@
 		FB2CF33C2091CBE1006D4B23 /* BMCategoryExample */ = {
 			isa = PBXGroup;
 			children = (
+				FB2CF37B2091DE5D006D4B23 /* Masonry */,
 				FB2CF36F2091CDD0006D4B23 /* BMCategory */,
 				FB2CF33D2091CBE1006D4B23 /* AppDelegate.h */,
 				FB2CF33E2091CBE1006D4B23 /* AppDelegate.m */,
@@ -142,13 +185,49 @@
 		FB2CF36F2091CDD0006D4B23 /* BMCategory */ = {
 			isa = PBXGroup;
 			children = (
+				FBE1ACB920A282D00014AE18 /* QRCodeBundle.bundle */,
 				FB2CF3732091CDF0006D4B23 /* GeneralUtil.h */,
 				FB2CF3742091CDF0006D4B23 /* GeneralUtil.m */,
 				FB2CF3702091CDD0006D4B23 /* UIView+LBFrame.h */,
 				FB2CF3712091CDD0006D4B23 /* UIView+LBFrame.m */,
+				FB2CF3762091D941006D4B23 /* QRCodeScanViewController.h */,
+				FB2CF3772091D941006D4B23 /* QRCodeScanViewController.m */,
 			);
 			name = BMCategory;
 			path = ../../BMCategory;
+			sourceTree = "<group>";
+		};
+		FB2CF37B2091DE5D006D4B23 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				FB2CF37C2091DE5D006D4B23 /* Info.plist */,
+				FB2CF37D2091DE5D006D4B23 /* MASCompositeConstraint.h */,
+				FB2CF37E2091DE5D006D4B23 /* MASCompositeConstraint.m */,
+				FB2CF37F2091DE5D006D4B23 /* MASConstraint+Private.h */,
+				FB2CF3802091DE5D006D4B23 /* MASConstraint.h */,
+				FB2CF3812091DE5D006D4B23 /* MASConstraint.m */,
+				FB2CF3822091DE5D006D4B23 /* MASConstraintMaker.h */,
+				FB2CF3832091DE5D006D4B23 /* MASConstraintMaker.m */,
+				FB2CF3842091DE5D006D4B23 /* MASLayoutConstraint.h */,
+				FB2CF3852091DE5D006D4B23 /* MASLayoutConstraint.m */,
+				FB2CF3862091DE5D006D4B23 /* Masonry.h */,
+				FB2CF3872091DE5D006D4B23 /* MASUtilities.h */,
+				FB2CF3882091DE5D006D4B23 /* MASViewAttribute.h */,
+				FB2CF3892091DE5D006D4B23 /* MASViewAttribute.m */,
+				FB2CF38A2091DE5D006D4B23 /* MASViewConstraint.h */,
+				FB2CF38B2091DE5D006D4B23 /* MASViewConstraint.m */,
+				FB2CF38C2091DE5D006D4B23 /* NSArray+MASAdditions.h */,
+				FB2CF38D2091DE5D006D4B23 /* NSArray+MASAdditions.m */,
+				FB2CF38E2091DE5D006D4B23 /* NSArray+MASShorthandAdditions.h */,
+				FB2CF38F2091DE5D006D4B23 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				FB2CF3902091DE5D006D4B23 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				FB2CF3912091DE5D006D4B23 /* View+MASAdditions.h */,
+				FB2CF3922091DE5D006D4B23 /* View+MASAdditions.m */,
+				FB2CF3932091DE5D006D4B23 /* View+MASShorthandAdditions.h */,
+				FB2CF3942091DE5D006D4B23 /* ViewController+MASAdditions.h */,
+				FB2CF3952091DE5D006D4B23 /* ViewController+MASAdditions.m */,
+			);
+			path = Masonry;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +336,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBE1ACBA20A282D00014AE18 /* QRCodeBundle.bundle in Resources */,
 				FB2CF34A2091CBE1006D4B23 /* LaunchScreen.storyboard in Resources */,
 				FB2CF3472091CBE1006D4B23 /* Assets.xcassets in Resources */,
+				FB2CF3962091DE5D006D4B23 /* Info.plist in Resources */,
 				FB2CF3452091CBE1006D4B23 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,11 +365,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB2CF3982091DE5D006D4B23 /* MASConstraint.m in Sources */,
+				FB2CF39B2091DE5D006D4B23 /* MASViewAttribute.m in Sources */,
+				FB2CF3A02091DE5D006D4B23 /* ViewController+MASAdditions.m in Sources */,
+				FB2CF39D2091DE5D006D4B23 /* NSArray+MASAdditions.m in Sources */,
 				FB2CF3752091CDF0006D4B23 /* GeneralUtil.m in Sources */,
+				FB2CF39C2091DE5D006D4B23 /* MASViewConstraint.m in Sources */,
+				FB2CF39A2091DE5D006D4B23 /* MASLayoutConstraint.m in Sources */,
 				FB2CF3722091CDD1006D4B23 /* UIView+LBFrame.m in Sources */,
 				FB2CF3422091CBE1006D4B23 /* ViewController.m in Sources */,
+				FB2CF39F2091DE5D006D4B23 /* View+MASAdditions.m in Sources */,
+				FB2CF3972091DE5D006D4B23 /* MASCompositeConstraint.m in Sources */,
+				FB2CF39E2091DE5D006D4B23 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				FB2CF3992091DE5D006D4B23 /* MASConstraintMaker.m in Sources */,
 				FB2CF34D2091CBE1006D4B23 /* main.m in Sources */,
 				FB2CF33F2091CBE1006D4B23 /* AppDelegate.m in Sources */,
+				FB2CF3782091D941006D4B23 /* QRCodeScanViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
