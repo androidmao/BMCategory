@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "BMCategory"
-  s.version          = "0.0.3"
+  s.version          = "0.0.5"
   s.summary          = "Custom Category used on iOS."
   s.description      = <<-DESC
                        Custom Category used on iOS, which implement by Objective-C.
@@ -12,4 +12,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/androidmao/BMCategory.git", :tag => s.version }
   s.source_files     = 'BMCategory/**/*.{h,m}'
   s.requires_arc     = true
+
+  s.dependency "Masonry"
+
 end

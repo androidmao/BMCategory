@@ -216,26 +216,26 @@
         [_qrcodeBackgroundImageView addSubview:qrcodeBottomRightImageView];
 
         [qrcodeTopLeftImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(_qrcodeBackgroundImageView).mas_offset(-1);
-            make.left.equalTo(_qrcodeBackgroundImageView).mas_offset(-1);
+            make.top.equalTo(self.qrcodeBackgroundImageView).mas_offset(-1);
+            make.left.equalTo(self.qrcodeBackgroundImageView).mas_offset(-1);
             make.size.mas_equalTo(CGSizeMake(25, 25));
         }];
 
         [qrcodeTopRightImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(_qrcodeBackgroundImageView).mas_offset(-1);
-            make.right.equalTo(_qrcodeBackgroundImageView).mas_offset(1);
+            make.top.equalTo(self.qrcodeBackgroundImageView).mas_offset(-1);
+            make.right.equalTo(self.qrcodeBackgroundImageView).mas_offset(1);
             make.size.mas_equalTo(CGSizeMake(25, 25));
         }];
 
         [qrcodeBottomLeftImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.bottom.equalTo(_qrcodeBackgroundImageView).mas_offset(3);
-            make.left.equalTo(_qrcodeBackgroundImageView).mas_offset(-1);
+            make.bottom.equalTo(self.qrcodeBackgroundImageView).mas_offset(3);
+            make.left.equalTo(self.qrcodeBackgroundImageView).mas_offset(-1);
             make.size.mas_equalTo(CGSizeMake(25, 25));
         }];
 
         [qrcodeBottomRightImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.bottom.equalTo(_qrcodeBackgroundImageView).mas_offset(3);
-            make.right.equalTo(_qrcodeBackgroundImageView).mas_offset(1);
+            make.bottom.equalTo(self.qrcodeBackgroundImageView).mas_offset(3);
+            make.right.equalTo(self.qrcodeBackgroundImageView).mas_offset(1);
             make.size.mas_equalTo(CGSizeMake(25, 25));
         }];
 
