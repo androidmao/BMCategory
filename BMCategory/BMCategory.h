@@ -7,5 +7,6 @@
 //
 
 #import "GeneralUtil.h"
+#import "UIUtil.h"
 #import "QRCodeScanViewController.h"
 

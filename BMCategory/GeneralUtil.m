@@ -109,6 +109,34 @@
 }
 
 
++ (UIImage *)generateCircleImage:(UIImage *)originalImage {
+    // self -> 圆形图片
+    
+    // 开启图形上下文
+    UIGraphicsBeginImageContext(originalImage.size);
+    
+    // 上下文
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    // 添加一个圆
+    CGRect rect = CGRectMake(0, 0, originalImage.size.width, originalImage.size.height);
+    CGContextAddEllipseInRect(context, rect);
+    
+    // 裁剪
+    CGContextClip(context);
+    
+    // 绘制图片到圆上面
+    [originalImage drawInRect:rect];
+    
+    // 获得图片
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    // 结束图形上下文
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
 //将时间戳转换为NSDate类型
 +(NSDate *)getDateTimeFromMilliSeconds:(long long) miliSeconds{
     NSTimeInterval tempMilli = miliSeconds;
@@ -530,7 +558,91 @@
     return size.width;
 }
 
+//正则匹配邮箱号
++ (BOOL)checkMailInput:(NSString *)mail {
+    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:mail];
+}
 
+//正则匹配用户姓名,20位的中文或英文
++ (BOOL)checkUserName : (NSString *) userName {
+    //    NSString *pattern = @"^[A-Za-z0-9]{6,20}+$";
+    NSString *pattern = @"^([\u4e00-\u9fa5]+|([a-zA-Z]+\s?)+)$";
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", pattern];
+    BOOL isMatch = [pred evaluateWithObject:userName];
+    return isMatch;
+}
+
+
+//正则匹配用户身份证号15或18位
++ (BOOL)checkUserIdCard: (NSString *) idCard {
+    BOOL flag;
+    if (idCard.length <= 0) {
+        flag = NO;
+        return flag;
+    }
+    NSString *regex2 = @"^(\\d{14}|\\d{17})(\\d|[xX])$";
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex2];
+    BOOL isMatch = [pred evaluateWithObject:idCard];
+    return isMatch;
+}
+
+//正则匹员工号,12位的数字
++ (BOOL)checkEmployeeNumber : (NSString *) number {
+    NSString *pattern = @"^[0-9]{12}";
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", pattern];
+    BOOL isMatch = [pred evaluateWithObject:number];
+    return isMatch;
+}
+
+//正则匹配URL
++ (BOOL)checkURL : (NSString *) url {
+    NSString *pattern = @"^[0-9A-Za-z]{1,50}";
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", pattern];
+    BOOL isMatch = [pred evaluateWithObject:url];
+    return isMatch;
+}
+
+//正则匹配昵称
++ (BOOL) checkNickname:(NSString *) nickname {
+    NSString *nicknameRegex = @"^[\u4e00-\u9fa5]{4,8}$";
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",nicknameRegex];
+    BOOL isMatch = [pred evaluateWithObject:nickname];
+    return isMatch;
+}
+
+//正则匹配银行卡号是否正确
++ (BOOL) checkBankNumber:(NSString *) bankNumber {
+    NSString *bankNum=@"^([0-9]{16}|[0-9]{19})$";
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",bankNum];
+    BOOL isMatch = [pred evaluateWithObject:bankNumber];
+    return isMatch;
+}
+
+//正则匹配17位车架号
++ (BOOL) checkCheJiaNumber:(NSString *) CheJiaNumber {
+    NSString *bankNum=@"^(\\d{17})$";
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",bankNum];
+    BOOL isMatch = [pred evaluateWithObject:CheJiaNumber];
+    return isMatch;
+}
+
+//正则只能输入数字和字母
++ (BOOL) checkTeshuZifuNumber:(NSString *) CheJiaNumber {
+    NSString *bankNum=@"^[A-Za-z0-9]+$";
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",bankNum];
+    BOOL isMatch = [pred evaluateWithObject:CheJiaNumber];
+    return isMatch;
+}
+
+//车牌号验证
++ (BOOL) checkCarNumber:(NSString *) CarNumber {
+    NSString *bankNum = @"^[\u4e00-\u9fa5]{1}[a-zA-Z]{1}[a-zA-Z_0-9]{4}[a-zA-Z_0-9_\u4e00-\u9fa5]$";
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",bankNum];
+    BOOL isMatch = [pred evaluateWithObject:CarNumber];
+    return isMatch;
+}
 
 
 @end

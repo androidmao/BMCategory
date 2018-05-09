@@ -35,11 +35,17 @@
 
 - (void)clickAction:(UIButton *)button {
     
-    QRCodeScanViewController *qrCodeScanViewController = [[QRCodeScanViewController alloc]initWithResult:^BOOL(NSString *result) {
-        return NO;
-    }];
+//    QRCodeScanViewController *qrCodeScanViewController = [[QRCodeScanViewController alloc]initWithResult:^BOOL(NSString *result) {
+//        return NO;
+//    }];
+//
+//    [self presentViewController:qrCodeScanViewController animated:YES completion:nil];
     
-    [self presentViewController:qrCodeScanViewController animated:YES completion:nil];
+    [UIUtil showAlertView:nil message:@"" onClickOk:^{
+        
+    } okTitle:@"" onClickCancel:^{
+        
+    } cancelTitle:nil];
     
 }
 

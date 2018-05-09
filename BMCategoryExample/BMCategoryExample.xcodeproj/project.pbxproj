@@ -30,6 +30,7 @@
 		FB2CF39F2091DE5D006D4B23 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CF3922091DE5D006D4B23 /* View+MASAdditions.m */; };
 		FB2CF3A02091DE5D006D4B23 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CF3952091DE5D006D4B23 /* ViewController+MASAdditions.m */; };
 		FBE1ACBA20A282D00014AE18 /* QRCodeBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FBE1ACB920A282D00014AE18 /* QRCodeBundle.bundle */; };
+		FBE1ACD020A2F3AE0014AE18 /* UIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE1ACCF20A2F3AE0014AE18 /* UIUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,8 @@
 		FB2CF3952091DE5D006D4B23 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		FBE1ACB920A282D00014AE18 /* QRCodeBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QRCodeBundle.bundle; sourceTree = "<group>"; };
 		FBE1ACCD20A2D0BF0014AE18 /* BMCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMCategory.h; sourceTree = "<group>"; };
+		FBE1ACCE20A2F3AE0014AE18 /* UIUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIUtil.h; sourceTree = "<group>"; };
+		FBE1ACCF20A2F3AE0014AE18 /* UIUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +192,8 @@
 				FBE1ACCD20A2D0BF0014AE18 /* BMCategory.h */,
 				FB2CF3732091CDF0006D4B23 /* GeneralUtil.h */,
 				FB2CF3742091CDF0006D4B23 /* GeneralUtil.m */,
+				FBE1ACCE20A2F3AE0014AE18 /* UIUtil.h */,
+				FBE1ACCF20A2F3AE0014AE18 /* UIUtil.m */,
 				FB2CF3702091CDD0006D4B23 /* UIView+LBFrame.h */,
 				FB2CF3712091CDD0006D4B23 /* UIView+LBFrame.m */,
 				FB2CF3762091D941006D4B23 /* QRCodeScanViewController.h */,
@@ -367,6 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBE1ACD020A2F3AE0014AE18 /* UIUtil.m in Sources */,
 				FB2CF3982091DE5D006D4B23 /* MASConstraint.m in Sources */,
 				FB2CF39B2091DE5D006D4B23 /* MASViewAttribute.m in Sources */,
 				FB2CF3A02091DE5D006D4B23 /* ViewController+MASAdditions.m in Sources */,
