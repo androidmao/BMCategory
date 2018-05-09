@@ -189,7 +189,8 @@
     if (sounding) {
         //设置自定义声音
         SystemSoundID soundID;
-        AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"QRCodeBundle.bundle/qrcode_ring" ofType:@"wav"]], &soundID);
+        NSBundle *bundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:[self class]] pathForResource:@"QRCodeBundle" ofType:@"bundle"]];
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:[bundle pathForResource:@"qrcode_ring" ofType:@"wav"]], &soundID);
         AudioServicesPlaySystemSound(soundID);
     }
 }
@@ -197,18 +198,21 @@
 - (UIImageView *)qrcodeBackgroundImageView {
     if (!_qrcodeBackgroundImageView) {
         
-        _qrcodeBackgroundImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"QRCodeBundle.bundle/image_qrcode_background.png"]];
+        NSBundle *bundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:[self class]] pathForResource:@"QRCodeBundle" ofType:@"bundle"]];
+        
+        
+        _qrcodeBackgroundImageView = [[UIImageView alloc]initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"image_qrcode_background@2x" ofType:@"png"]]];
         [_qrcodeBackgroundImageView setUserInteractionEnabled:YES];
         [_qrcodeBackgroundImageView.layer setBorderColor:[UIColor greenColor].CGColor];
         [_qrcodeBackgroundImageView.layer setBorderWidth:0.5];
 
-        UIImageView *qrcodeTopLeftImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"QRCodeBundle.bundle/icon_qrcode_top_left.png"]];
+        UIImageView *qrcodeTopLeftImageView = [[UIImageView alloc]initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"icon_qrcode_top_left@2x" ofType:@"png"]]];
 
-        UIImageView *qrcodeTopRightImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"QRCodeBundle.bundle/icon_qrcode_top_right.png"]];
+        UIImageView *qrcodeTopRightImageView = [[UIImageView alloc]initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"icon_qrcode_top_right@2x" ofType:@"png"]]];
 
-        UIImageView *qrcodeBottomLeftImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"QRCodeBundle.bundle/icon_qrcode_bottom_left.png"]];
+        UIImageView *qrcodeBottomLeftImageView = [[UIImageView alloc]initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"icon_qrcode_bottom_left@2x" ofType:@"png"]]];
 
-        UIImageView *qrcodeBottomRightImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"QRCodeBundle.bundle/icon_qrcode_bottom_right.png"]];
+        UIImageView *qrcodeBottomRightImageView = [[UIImageView alloc]initWithImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"icon_qrcode_bottom_right@2x" ofType:@"png"]]];
 
         [_qrcodeBackgroundImageView addSubview:qrcodeTopLeftImageView];
         [_qrcodeBackgroundImageView addSubview:qrcodeTopRightImageView];
@@ -257,8 +261,9 @@
 - (UIButton *)lightSwitchButton {
     if (!_lightSwitchButton) {
         _lightSwitchButton = [[UIButton alloc]init];
-        [_lightSwitchButton setImage:[UIImage imageNamed:@"QRCodeBundle.bundle/icon_light_normal"] forState:UIControlStateNormal];
-        [_lightSwitchButton setImage:[UIImage imageNamed:@"QRCodeBundle.bundle/icon_light_highlighted"] forState:UIControlStateSelected];
+        NSBundle *bundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:[self class]] pathForResource:@"QRCodeBundle" ofType:@"bundle"]];
+        [_lightSwitchButton setImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"icon_light_normal@2x" ofType:@"png"]] forState:UIControlStateNormal];
+        [_lightSwitchButton setImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"icon_light_highlighted@2x" ofType:@"png"]] forState:UIControlStateSelected];
         [_lightSwitchButton addTarget:self action:@selector(QRCodeScanAction:) forControlEvents:UIControlEventTouchUpInside];
         [_lightSwitchButton setHidden:YES];
     }
@@ -268,7 +273,8 @@
 - (UIImageView *)scanningImageView {
     if (!_scanningImageView) {
         _scanningImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_W - 120, (SCREEN_W - 120) * 0.0375)];
-        [_scanningImageView setImage:[UIImage imageNamed:@"QRCodeBundle.bundle/qrcode_scan_weixin_Line.png"]];
+        NSBundle *bundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:[self class]] pathForResource:@"QRCodeBundle" ofType:@"bundle"]];
+        [_scanningImageView setImage:[UIImage imageWithContentsOfFile:[bundle pathForResource:@"qrcode_scan_weixin_Line@2x" ofType:@"png"]]];
         [_scanningImageView setHidden:YES];
     }
     return _scanningImageView;
