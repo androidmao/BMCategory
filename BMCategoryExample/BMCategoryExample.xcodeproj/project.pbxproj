@@ -29,6 +29,9 @@
 		FB2CF39E2091DE5D006D4B23 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CF3902091DE5D006D4B23 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		FB2CF39F2091DE5D006D4B23 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CF3922091DE5D006D4B23 /* View+MASAdditions.m */; };
 		FB2CF3A02091DE5D006D4B23 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CF3952091DE5D006D4B23 /* ViewController+MASAdditions.m */; };
+		FB65539720A93E83006C5F07 /* BMShareBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FB65539620A93E83006C5F07 /* BMShareBundle.bundle */; };
+		FBDAE7E520A58EC80069842D /* BMShareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDAE7E420A58EC80069842D /* BMShareButton.m */; };
+		FBDAE7E820A59DBC0069842D /* BMShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDAE7E720A59DBC0069842D /* BMShareView.m */; };
 		FBE1ACBA20A282D00014AE18 /* QRCodeBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FBE1ACB920A282D00014AE18 /* QRCodeBundle.bundle */; };
 		FBE1ACD020A2F3AE0014AE18 /* UIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE1ACCF20A2F3AE0014AE18 /* UIUtil.m */; };
 /* End PBXBuildFile section */
@@ -99,6 +102,11 @@
 		FB2CF3932091DE5D006D4B23 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		FB2CF3942091DE5D006D4B23 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		FB2CF3952091DE5D006D4B23 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		FB65539620A93E83006C5F07 /* BMShareBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BMShareBundle.bundle; sourceTree = "<group>"; };
+		FBDAE7E320A58EC80069842D /* BMShareButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMShareButton.h; sourceTree = "<group>"; };
+		FBDAE7E420A58EC80069842D /* BMShareButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMShareButton.m; sourceTree = "<group>"; };
+		FBDAE7E620A59DBC0069842D /* BMShareView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMShareView.h; sourceTree = "<group>"; };
+		FBDAE7E720A59DBC0069842D /* BMShareView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMShareView.m; sourceTree = "<group>"; };
 		FBE1ACB920A282D00014AE18 /* QRCodeBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QRCodeBundle.bundle; sourceTree = "<group>"; };
 		FBE1ACCD20A2D0BF0014AE18 /* BMCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMCategory.h; sourceTree = "<group>"; };
 		FBE1ACCE20A2F3AE0014AE18 /* UIUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIUtil.h; sourceTree = "<group>"; };
@@ -199,6 +207,11 @@
 				FB2CF3762091D941006D4B23 /* QRCodeScanViewController.h */,
 				FB2CF3772091D941006D4B23 /* QRCodeScanViewController.m */,
 				FBE1ACB920A282D00014AE18 /* QRCodeBundle.bundle */,
+				FBDAE7E320A58EC80069842D /* BMShareButton.h */,
+				FBDAE7E420A58EC80069842D /* BMShareButton.m */,
+				FBDAE7E620A59DBC0069842D /* BMShareView.h */,
+				FBDAE7E720A59DBC0069842D /* BMShareView.m */,
+				FB65539620A93E83006C5F07 /* BMShareBundle.bundle */,
 			);
 			name = BMCategory;
 			path = ../../BMCategory;
@@ -345,6 +358,7 @@
 			files = (
 				FBE1ACBA20A282D00014AE18 /* QRCodeBundle.bundle in Resources */,
 				FB2CF34A2091CBE1006D4B23 /* LaunchScreen.storyboard in Resources */,
+				FB65539720A93E83006C5F07 /* BMShareBundle.bundle in Resources */,
 				FB2CF3472091CBE1006D4B23 /* Assets.xcassets in Resources */,
 				FB2CF3962091DE5D006D4B23 /* Info.plist in Resources */,
 				FB2CF3452091CBE1006D4B23 /* Main.storyboard in Resources */,
@@ -372,10 +386,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBDAE7E820A59DBC0069842D /* BMShareView.m in Sources */,
 				FBE1ACD020A2F3AE0014AE18 /* UIUtil.m in Sources */,
 				FB2CF3982091DE5D006D4B23 /* MASConstraint.m in Sources */,
 				FB2CF39B2091DE5D006D4B23 /* MASViewAttribute.m in Sources */,
 				FB2CF3A02091DE5D006D4B23 /* ViewController+MASAdditions.m in Sources */,
+				FBDAE7E520A58EC80069842D /* BMShareButton.m in Sources */,
 				FB2CF39D2091DE5D006D4B23 /* NSArray+MASAdditions.m in Sources */,
 				FB2CF3752091CDF0006D4B23 /* GeneralUtil.m in Sources */,
 				FB2CF39C2091DE5D006D4B23 /* MASViewConstraint.m in Sources */,

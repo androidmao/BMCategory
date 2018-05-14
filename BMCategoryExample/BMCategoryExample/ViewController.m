@@ -9,8 +9,11 @@
 #import "ViewController.h"
 
 #import "BMCategory.h"
+#import "BMShareView.h"
 
 @interface ViewController ()
+
+@property(nonatomic, strong) UIButton *button;
 
 @end
 
@@ -19,15 +22,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 80, 50)];
-    [button setCenter:self.view.center];
-    [button setBackgroundImage:[GeneralUtil createImageByColor:[UIColor lightGrayColor]] forState:UIControlStateNormal];
+     _button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 80, 50)];
+    [_button setCenter:self.view.center];
+    [_button setBackgroundImage:[GeneralUtil createImageByColor:[UIColor grayColor]] forState:UIControlStateNormal];
     
-    [self.view addSubview:button];
+    [self.view addSubview:_button];
+    
+//    [self.view setBackgroundColor:[UIColor lightGrayColor]];
+    
+    [_button addTarget:self action:@selector(clickAction:) forControlEvents:UIControlEventTouchUpInside];
     
     
     
-    [button addTarget:self action:@selector(clickAction:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    
     
     
     
@@ -41,11 +50,19 @@
 //
 //    [self presentViewController:qrCodeScanViewController animated:YES completion:nil];
     
-    [UIUtil showAlertView:nil message:@"" onClickOk:^{
-        
-    } okTitle:@"" onClickCancel:^{
-        
-    } cancelTitle:nil];
+//    [UIUtil showAlertView:nil message:@"" onClickOk:^{
+//
+//    } okTitle:@"" onClickCancel:^{
+//
+//    } cancelTitle:nil];
+    
+    
+
+    
+    
+    [[[BMShareView alloc]initWithResult:^(ShareType shareType) {
+        NSLog(@"shareType:%lu",(unsigned long)shareType);
+    }] showView:YES];
     
 }
 

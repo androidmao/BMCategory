@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "BMCategory"
-  s.version          = "1.0.0"
+  s.version          = "1.0.1"
   s.summary          = "Custom Category used on iOS."
   s.description      = <<-DESC
                        Custom Category used on iOS, which implement by Objective-C.
@@ -13,7 +13,8 @@ Pod::Spec.new do |s|
   s.source_files     = 'BMCategory/**/*.{h,m}'
   s.requires_arc     = true
 
-  s.resource         = 'BMCategory/QRCodeBundle.bundle'
+  s.resources         = ['BMCategory/QRCodeBundle.bundle','BMCategory/BMShareBundle.bundle']
+
   s.dependency "Masonry"
 
 end
