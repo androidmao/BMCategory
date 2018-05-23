@@ -30,10 +30,14 @@
 		FB2CF39F2091DE5D006D4B23 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CF3922091DE5D006D4B23 /* View+MASAdditions.m */; };
 		FB2CF3A02091DE5D006D4B23 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2CF3952091DE5D006D4B23 /* ViewController+MASAdditions.m */; };
 		FB65539720A93E83006C5F07 /* BMShareBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FB65539620A93E83006C5F07 /* BMShareBundle.bundle */; };
+		FBD531E220B5426B0030BC84 /* UIColor+ImageGetColor.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD531E120B5426A0030BC84 /* UIColor+ImageGetColor.m */; };
+		FBD531E520B549480030BC84 /* BMPopMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD531E420B549480030BC84 /* BMPopMenuItem.m */; };
 		FBDAE7E520A58EC80069842D /* BMShareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDAE7E420A58EC80069842D /* BMShareButton.m */; };
 		FBDAE7E820A59DBC0069842D /* BMShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBDAE7E720A59DBC0069842D /* BMShareView.m */; };
 		FBE1ACBA20A282D00014AE18 /* QRCodeBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FBE1ACB920A282D00014AE18 /* QRCodeBundle.bundle */; };
 		FBE1ACD020A2F3AE0014AE18 /* UIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE1ACCF20A2F3AE0014AE18 /* UIUtil.m */; };
+		FBECB30120B4264B00ED99D9 /* BMPopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBECB30020B4264B00ED99D9 /* BMPopMenuView.m */; };
+		FBECB30420B4267E00ED99D9 /* BMPopMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FBECB30320B4267E00ED99D9 /* BMPopMenuButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +107,10 @@
 		FB2CF3942091DE5D006D4B23 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		FB2CF3952091DE5D006D4B23 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		FB65539620A93E83006C5F07 /* BMShareBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BMShareBundle.bundle; sourceTree = "<group>"; };
+		FBD531E020B5426A0030BC84 /* UIColor+ImageGetColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ImageGetColor.h"; sourceTree = "<group>"; };
+		FBD531E120B5426A0030BC84 /* UIColor+ImageGetColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ImageGetColor.m"; sourceTree = "<group>"; };
+		FBD531E320B549480030BC84 /* BMPopMenuItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMPopMenuItem.h; sourceTree = "<group>"; };
+		FBD531E420B549480030BC84 /* BMPopMenuItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMPopMenuItem.m; sourceTree = "<group>"; };
 		FBDAE7E320A58EC80069842D /* BMShareButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMShareButton.h; sourceTree = "<group>"; };
 		FBDAE7E420A58EC80069842D /* BMShareButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMShareButton.m; sourceTree = "<group>"; };
 		FBDAE7E620A59DBC0069842D /* BMShareView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMShareView.h; sourceTree = "<group>"; };
@@ -111,6 +119,10 @@
 		FBE1ACCD20A2D0BF0014AE18 /* BMCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMCategory.h; sourceTree = "<group>"; };
 		FBE1ACCE20A2F3AE0014AE18 /* UIUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIUtil.h; sourceTree = "<group>"; };
 		FBE1ACCF20A2F3AE0014AE18 /* UIUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIUtil.m; sourceTree = "<group>"; };
+		FBECB2FF20B4264B00ED99D9 /* BMPopMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMPopMenuView.h; sourceTree = "<group>"; };
+		FBECB30020B4264B00ED99D9 /* BMPopMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMPopMenuView.m; sourceTree = "<group>"; };
+		FBECB30220B4267E00ED99D9 /* BMPopMenuButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMPopMenuButton.h; sourceTree = "<group>"; };
+		FBECB30320B4267E00ED99D9 /* BMPopMenuButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMPopMenuButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +224,14 @@
 				FBDAE7E620A59DBC0069842D /* BMShareView.h */,
 				FBDAE7E720A59DBC0069842D /* BMShareView.m */,
 				FB65539620A93E83006C5F07 /* BMShareBundle.bundle */,
+				FBECB30220B4267E00ED99D9 /* BMPopMenuButton.h */,
+				FBECB30320B4267E00ED99D9 /* BMPopMenuButton.m */,
+				FBD531E320B549480030BC84 /* BMPopMenuItem.h */,
+				FBD531E420B549480030BC84 /* BMPopMenuItem.m */,
+				FBECB2FF20B4264B00ED99D9 /* BMPopMenuView.h */,
+				FBECB30020B4264B00ED99D9 /* BMPopMenuView.m */,
+				FBD531E020B5426A0030BC84 /* UIColor+ImageGetColor.h */,
+				FBD531E120B5426A0030BC84 /* UIColor+ImageGetColor.m */,
 			);
 			name = BMCategory;
 			path = ../../BMCategory;
@@ -386,6 +406,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBD531E520B549480030BC84 /* BMPopMenuItem.m in Sources */,
+				FBECB30120B4264B00ED99D9 /* BMPopMenuView.m in Sources */,
 				FBDAE7E820A59DBC0069842D /* BMShareView.m in Sources */,
 				FBE1ACD020A2F3AE0014AE18 /* UIUtil.m in Sources */,
 				FB2CF3982091DE5D006D4B23 /* MASConstraint.m in Sources */,
@@ -398,6 +420,8 @@
 				FB2CF39A2091DE5D006D4B23 /* MASLayoutConstraint.m in Sources */,
 				FB2CF3722091CDD1006D4B23 /* UIView+LBFrame.m in Sources */,
 				FB2CF3422091CBE1006D4B23 /* ViewController.m in Sources */,
+				FBECB30420B4267E00ED99D9 /* BMPopMenuButton.m in Sources */,
+				FBD531E220B5426B0030BC84 /* UIColor+ImageGetColor.m in Sources */,
 				FB2CF39F2091DE5D006D4B23 /* View+MASAdditions.m in Sources */,
 				FB2CF3972091DE5D006D4B23 /* MASCompositeConstraint.m in Sources */,
 				FB2CF39E2091DE5D006D4B23 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,

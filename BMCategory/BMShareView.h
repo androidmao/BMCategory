@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BMShareButton.h"
 
 typedef NS_ENUM(NSUInteger, ShareType) {
     ///微信

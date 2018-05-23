@@ -7,7 +7,6 @@
 //
 
 #import "BMShareView.h"
-#import "BMShareButton.h"
 
 #define SCREEN_W [UIScreen mainScreen].bounds.size.width
 #define SCREEN_H [UIScreen mainScreen].bounds.size.height

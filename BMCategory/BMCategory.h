@@ -9,4 +9,5 @@
 #import "GeneralUtil.h"
 #import "UIUtil.h"
 #import "QRCodeScanViewController.h"
+#import "BMShareView.h"
 
