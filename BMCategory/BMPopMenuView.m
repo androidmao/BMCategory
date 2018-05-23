@@ -87,14 +87,14 @@
     
     [[UIApplication sharedApplication].keyWindow addSubview:self];
     
-    [_items enumerateObjectsUsingBlock:^(BMPopMenuItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    [self.items enumerateObjectsUsingBlock:^(BMPopMenuItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         
         obj.menuButton.transform = CGAffineTransformMakeTranslation(0, -CGRectGetMaxY(obj.menuButton.frame));
         
-        [UIView animateWithDuration:0.8 delay:(_items.count - idx) * 0.05 usingSpringWithDamping:0.7 initialSpringVelocity:10.0f options:UIViewAnimationOptionCurveEaseOut animations:^{
+        [UIView animateWithDuration:0.8 delay:(self.items.count - idx) * 0.05 usingSpringWithDamping:0.7 initialSpringVelocity:10.0f options:UIViewAnimationOptionCurveEaseOut animations:^{
             obj.menuButton.transform = CGAffineTransformIdentity;
             
-            if (idx == _items.count - 1) {
+            if (idx == self.items.count - 1) {
                 [self.visualEffectView setAlpha:0.8];
             }
             
@@ -111,7 +111,7 @@
     
     [self.closeButton setEnabled:NO];
     
-    [_items enumerateObjectsUsingBlock:^(BMPopMenuItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    [self.items enumerateObjectsUsingBlock:^(BMPopMenuItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         
         obj.menuButton.transform = CGAffineTransformIdentity;
         
@@ -119,9 +119,9 @@
             
             CGFloat SCR_H = CGRectGetHeight([UIScreen mainScreen].bounds);
             
-            obj.menuButton.transform = CGAffineTransformMakeTranslation(0, -(((_items.count - idx - 1) / 3 + 2) * CGRectGetWidth(obj.menuButton.frame) + (SCR_H - CGRectGetWidth(obj.menuButton.frame) * 2)/2));
+            obj.menuButton.transform = CGAffineTransformMakeTranslation(0, -(((self.items.count - idx - 1) / 3 + 2) * CGRectGetWidth(obj.menuButton.frame) + (SCR_H - CGRectGetWidth(obj.menuButton.frame) * 2)/2));
             
-            if (idx == _items.count - 1) {
+            if (idx == self.items.count - 1) {
                 [self.visualEffectView setAlpha:0];
             }
             
